@@ -64,7 +64,8 @@ namespace PowerApps.Samples
                         foreach (EntityMetadata entity in response?.EntityMetadata)
                         {
                             // Only draw an entity if it does not exist in the excluded entity table.
-                            if (!_excludedEntityTable.ContainsKey(entity.LogicalName.GetHashCode()))
+                             if (!_excludedEntityTable.ContainsKey(entity.LogicalName.GetHashCode()))
+                            //if (_includedEntityTable.ContainsKey(entity.LogicalName.GetHashCode()))
                             {
                                 entities.Add(entity.LogicalName);
                             }
